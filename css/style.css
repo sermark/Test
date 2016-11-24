@@ -1,10 +1,10 @@
 html,
 body {
 	min-width: 1200px;
-	min-height: 1750px;
 	font-family: "Roboto", Tahoma, sans-serif;
 	margin: 0;
 	padding: 0;
+	background-color: #849d8f;
 }
 
 input[type="text"],
@@ -47,7 +47,7 @@ input[required]:valid + .title {
 	width: 1146px;
 	padding: 0 27px;
 	margin: 0 auto;
-	margin-bottom:505px;
+
 }
 
 .header-logo{
@@ -83,6 +83,7 @@ input[required]:valid + .title {
 .index-content{
 	width: 1146px;
 	margin:0 auto;
+	margin-top:505px;
 	margin-bottom: 40px;
 }
 
@@ -113,7 +114,7 @@ input[required]:valid + .title {
 	margin-right: 26px;
 }
 
-.catalog-item:last-child{
+.catalog-item:nth-child(4n){
 	margin-right:0;
 }
 
@@ -227,7 +228,7 @@ input[required]:valid + .title {
   background-image: url("../img/bg-body-3.jpg");
 }
 
-body > input[type="radio"] {
+body input[type="radio"] {
   display: none;
 }
 
@@ -343,6 +344,32 @@ body > input[type="radio"] {
   	color: #ffffff;
   	text-decoration: none;
   	white-space: nowrap;
+}
+
+.breadcrumps a{
+	display: inline-block;
+	font-size: 14px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #ffffff;
+	text-decoration: underline;
+	vertical-align: top;
+}
+
+.breadcrumps span{
+	color: #ffffff;
+}
+
+.breadcrumps a:hover:not(.active){
+	color: #ffbc9e;
+}
+
+.breadcrumps a:active:not(.active){
+	color: #ffbc9e;
+}
+
+.breadcrumps .active{
+	text-decoration: none;
 }
 
 .top-menu-item:hover > a{
@@ -462,7 +489,7 @@ body > input[type="radio"] {
  	top:37px;
  	right: 0px;
  	margin: 0;
-    display: none;
+	display: none;
 }
 
 .form{
