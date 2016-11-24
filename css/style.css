@@ -123,7 +123,7 @@ input[required]:valid + .title {
 	margin: 0 auto;
 	margin-bottom: 35px;
 	background: #ebddc2 url("../img/bg-info.jpg");
-	border-radius: 15px; 
+	border-radius: 15px;
 }
 
 .info-left{
@@ -160,7 +160,7 @@ input[required]:valid + .title {
 	min-height: 430px;
 	margin: 0 auto;
 	margin-bottom: 20px;
-	background-image: url("../img/map.jpg"); 
+	background-image: url("../img/map.jpg");
 }
 
 .main-footer{
@@ -461,7 +461,7 @@ body > input[type="radio"] {
  	position: absolute;
  	top:37px;
  	right: 0px;
- 	margin: 0; 
+ 	margin: 0;
     display: none;
 }
 
@@ -516,7 +516,7 @@ body > input[type="radio"] {
     z-index: 2;
     top: 7px;
     right: -10px;
-	
+
     display: none;
     background-color: transparent;
     width: 270px;
@@ -640,7 +640,7 @@ body > input[type="radio"] {
 	font-size: 35px;
 	font-weight: 700;
 	line-height: 45px;
-	color: #ffffff; 
+	color: #ffffff;
 
 }
 
@@ -663,6 +663,7 @@ body > input[type="radio"] {
 
 .catalog-item{
 	position: relative;
+	z-index: 20;
 }
 
 .catalog-item::before{
@@ -709,6 +710,7 @@ body > input[type="radio"] {
 .overlay{
 	display: none;
 	position: absolute;
+	z-index: -1;
 	top: -10px;
 	left: -10px;
 	width: 107%;
@@ -777,7 +779,7 @@ body > input[type="radio"] {
 	position: absolute;
 	top: 10px;
 	left: 20px;
-	width: 49px; 
+	width: 49px;
 	height: 49px;
 	background: url("../img/ice.svg") center no-repeat;
 }
@@ -787,17 +789,17 @@ body > input[type="radio"] {
 	position: absolute;
 	top: 95px;
 	left: 20px;
-	width: 49px; 
+	width: 49px;
 	height: 49px;
 	background: url("../img/leaf.svg") center no-repeat;
-}		
+}
 
 .info-right::after{
 	content: "";
 	position: absolute;
 	top: 10px;
 	left: 0;
-	width: 49px; 
+	width: 49px;
 	height: 49px;
 	background: url("../img/cow.svg") center no-repeat;
 }
@@ -807,10 +809,10 @@ body > input[type="radio"] {
 	position: absolute;
 	top: 95px;
 	left: 0;
-	width: 49px; 
+	width: 49px;
 	height: 49px;
 	background: url("../img/thermometer.svg") center no-repeat;
-}	
+}
 
 .blog p{
 	display: block;
