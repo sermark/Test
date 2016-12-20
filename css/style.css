@@ -66,7 +66,7 @@ input[required]:valid + .title {
 
 .user-block{
 	float: right;
-	min-width: 267px;
+	width: 275px;
 }
 
 .header-contacts{
@@ -495,6 +495,10 @@ body input[type="checkbox"] {
 	border-radius: 15px;
 }
 
+.user-block div:last-child{
+	margin-right: 0;
+}
+
 .user-block a{
 	display: inline-block;
 	font-family: "Roboto", Tahoma, sans-serif;
@@ -686,10 +690,138 @@ body input[type="checkbox"] {
 	background: url("../img/icon-basket-full.png") center no-repeat;
 }
 
-.basket .ordered{
+.basket:hover .ordered{
+	display: block;
+}
+
+.user-block .ordered{
+	display: none;
 	position: absolute;
-	top: 10px;
-	left: -100px;
+	min-width: 540px;
+	top: -3px;
+	left: -418px;
+	margin-top: 40px;
+	padding: 25px auto;
+	border-radius: 5px;
+	background-color: #f8f7f4;
+	box-shadow: 0 20px 20px rgba(0,0,0,.4);
+	z-index: 10;
+}
+
+
+.user-block .ordered .order-item{
+	padding-top: 20px;
+	padding-bottom: 13px;
+	margin: 0;
+	background-color: #f8f7f4;
+}
+
+.user-block .ordered .order-item:not(:first-child){
+	padding-top: 0;
+}
+
+.user-block .order-item div{
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+	background-color: #f8f7f4;
+}
+
+.user-block .order-item .order-img{
+	margin-top: 7px;
+	margin-left: 5px;
+	margin-bottom: 0;
+	width: 33px;
+	height: 33px;
+}
+
+.user-block .order-item .order-description,
+.user-block .order-item .item-option,
+.user-block .order-item .item-price{
+	margin-top: 15px;
+	margin-bottom: 0;
+	margin-left: 5px;
+}
+
+
+.user-block .order-item .item-option,
+.user-block .order-item .item-price{
+	margin-left: 20px;
+}
+
+
+.user-block .order-item p{
+	color: #333333;
+	padding: 0;
+	margin:0;
+	font-size: 13px;
+	line-height: 16px;
+}
+
+.ordered .divider{
+	margin: 5px 10px;
+	margin-bottom: 0;
+	width: 95%;
+	height: 1px;
+	background-color: #cacac7;
+}
+
+.ordered .order-item .close{
+	position: relative;
+	margin: 0;
+	margin-top: 15px;
+	margin-left: 15px;
+	padding: 0;
+	width: 12px;
+	height: 12px;
+}
+
+.ordered .order-item .close::before{
+	position: absolute;
+	top:6px;
+	left: -1px;
+	content: "";
+	display: block;
+	width: 14px;
+	height: 1px;
+	background-color: #333333;
+	transform: rotate(45deg);
+
+}
+
+.ordered .order-item .close::after{
+	position: absolute;
+	top:6px;
+	left: -1px;
+	content: "";
+	display: block;
+	width: 14px;
+	height: 1px;
+	background-color: #333333;
+	transform: rotate(-45deg);
+
+}
+
+.ordered .total-price{
+	float: right;
+	color: #333333;
+	padding: 0;
+	margin:0;
+	margin-right: 25px;
+	margin-bottom: 55px;
+	font-weight: 700;
+	font-size: 15px;
+	line-height: 18px;
+}
+
+.ordered .btn{
+	position: absolute;
+	top:182px;
+	left: 365px;
+	min-width: 160px;
+	font-size: 14px;
+	line-height: 18px;
+	padding: 9px 25px;
 }
 
 .header-contacts p{
@@ -1465,3 +1597,121 @@ select:not([size]):not([multiple]) {
 	color: #ffffff;
 	font-weight: 400;
 }
+
+
+
+
+
+
+
+.popup-feedback {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+
+  
+  box-sizing: border-box;
+  width: 476px;
+  height: 442px;
+  margin-top: -221px;
+  margin-left: -238px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  color: #323232;
+
+  background-color: #f8f7f4;
+  border-radius: 10px;
+}
+
+.popup-feedback h3 {
+  margin: 0;
+  margin-top: 16px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.popup-feedback input {
+  box-sizing: border-box;
+  width: 267px;
+  margin-left: 0;
+}
+
+.popup-feedback textarea {
+  box-sizing: border-box;
+  width: 428px;
+  height: 155px;
+  margin-left: 0;
+}
+
+.popup-feedback button {
+  float: right;
+  margin-top: 15px;
+}
+
+.popup-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+
+  width: 17px;
+  height: 17px;
+
+  font-size: 0;
+
+  background-color: #f8f7f4;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.popup-close::before,
+.popup-close::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: -2px;
+
+  width: 22px;
+  height: 2px;
+
+  background-color: #000000;
+  border-radius: 1px;
+}
+
+.popup-close::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popup-close::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popup-close:hover::before,
+.popup-close:hover::after {
+  background-color: #323232;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+div.popup-feedback span,
+form.subscribe-form span {
+  padding-left: 15px;
+}
+
