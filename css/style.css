@@ -23,7 +23,9 @@ textarea {
 }
 
 input:focus + .title,
-input[required]:valid + .title {
+input[required]:valid + .title,
+textarea:focus + .title,
+textarea[required]:valid + .title {
 	font-size: 12px;
 	line-height: 1;
 	color: #5b9ddf;
@@ -1604,114 +1606,152 @@ select:not([size]):not([multiple]) {
 
 
 
-.popup-feedback {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  z-index: 100;
+.feedback-form{
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
 
-  
-  box-sizing: border-box;
-  width: 476px;
-  height: 442px;
-  margin-top: -221px;
-  margin-left: -238px;
-  padding-right: 25px;
-  padding-left: 25px;
+    box-sizing: border-box;
+    width: 477px;
+    margin-top: -222px;
+    margin-left: -239px;
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 27px;
+    padding-left: 24px;
 
-  color: #323232;
+   
 
-  background-color: #f8f7f4;
-  border-radius: 10px;
+    display: none;
+    color: #323232;
+    border-radius: 10px;
+    background-color: #f8f7f4;
 }
 
-.popup-feedback h3 {
-  margin: 0;
-  margin-top: 16px;
+.feedback-form-show{
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
 
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 28px;
+    display: block;
 }
 
-.popup-feedback input {
-  box-sizing: border-box;
-  width: 267px;
-  margin-left: 0;
+.popup-overlay{
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    
+
+    display: none;
+    background-color: rgba(0, 0, 0, .3);
 }
 
-.popup-feedback textarea {
-  box-sizing: border-box;
-  width: 428px;
-  height: 155px;
-  margin-left: 0;
+.popup-overlay-show{
+	z-index: 5;
+    display: block;
 }
 
-.popup-feedback button {
-  float: right;
-  margin-top: 15px;
+.feedback-title{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+
+    position: relative;
+
+    display: inline-block;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: top;
+
+    color: #323232;
 }
 
-.popup-close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+.feedback-btn-close{
+    font-size: 0;
 
-  width: 17px;
-  height: 17px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 
-  font-size: 0;
+    width: 17px;
+    height: 17px;
 
-  background-color: #f8f7f4;
-  border: 0;
-  outline: 0;
-  cursor: pointer;
+    cursor: pointer;
+
+    border: 0;
+    outline: none;
+    background: #f8f7f4;
 }
 
-.popup-close::before,
-.popup-close::after {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: -2px;
+.feedback-btn-close::before,
+.feedback-btn-close::after{
+    position: absolute;
+    top: 8px;
+    left: 0;
 
-  width: 22px;
-  height: 2px;
+    width: 19px;
+    height: 2px;
 
-  background-color: #000000;
-  border-radius: 1px;
+    content: "";
+
+    border-radius: 1px;
+    background-color: #000;
 }
 
-.popup-close::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+.feedback-btn-close::before{
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
-.popup-close::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+.feedback-btn-close::after{
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
 }
 
-.popup-close:hover::before,
-.popup-close:hover::after {
-  background-color: #323232;
+.feedback-form .btn{
+    float: right;
+    font-size: 18px;
+ 	line-height: 24px;
+    font-weight: 700;
+
+    padding: 10px 20px;
 }
 
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 90;
-
-
-  width: 100%;
-  height: 100%;
-
-  background-color: rgba(0, 0, 0, 0.3);
+.feedback-form .input-control{
+    margin: 20px auto;
 }
 
-div.popup-feedback span,
-form.subscribe-form span {
-  padding-left: 15px;
+
+.feedback-form input{
+    width: 247px;
+    margin-bottom: 20px;
 }
 
+.input-control .title{
+	top: 77px;
+	left: 35px;
+}
+
+.input-control .title:nth-of-type(2){
+	top: 140px;
+}
+
+.input-control .title:last-of-type{
+	top:200px;
+}
+
+.feedback-form textarea{
+    width: 408px;
+    min-height: 155px;
+    max-height: 415px;
+    margin: 0;
+
+    resize: vertical;
+}

@@ -205,21 +205,24 @@
 			</footer>
 		</div>
 
-		<div class="popup-feedback">
-		    <h3>Мы обязательно вам ответим!</h3>
-		    <button class="popup-close" type="button" title="Закрыть">Закрыть</button>
-		    <form action="https://echo.htmlacademy.ru" method="post">
-		    	<input type="text" name="feedback-name" placeholder="Как вас зовут?" required>
-		    	<label class="hiden-top"><span>Как вас зовут?</span></label>
-		    	<input type="email" name="email" placeholder="Ваша почта для ответа?" required>
-		    	<label class="hiden-top"><span>Ваша почта для ответа?</span></label>
-		    	<textarea name="feedback-text" placeholder="Напишите что-нибудь..." required></textarea>
-		    	<label class="hiden-top"><span>Напишите что-нибудь...</span></label>
-		    	<button class="site-button">Отправить</button>
-		    </form>
-		</div>
-		<div class="popup-overlay">
-		</div>
+		<div class="feedback-form">
+            <form action="#" method="post">
+                <button class="feedback-btn-close" type="button" title="Закрыть"></button>
+                <div class="feedback-title">Мы обязательно вам ответим!</div>
+                <div class="input-control">
+                    <input type="text" name="username" id="username" required>
+                    <label class="title" for="username">Как вас зовут?</label>
+               
+                    <input type="text" name="email" id="your-email" required>
+                    <label class="title" for="your-email">Ваша почта для ответа?</label>
+                
+                    <textarea name="comment" id="comment" required></textarea>
+                    <label class="title" for="comment">Напишите что-нибудь...</label>
+                </div>
+                <button class="btn feedback-btn-send" type="submit">Отправить</button>
+            </form>
+        </div>
+        <div class="popup-overlay"></div>
 
 	</body>
 </html>
