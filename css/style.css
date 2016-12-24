@@ -168,6 +168,15 @@ textarea[required]:valid + .title {
 	background-image: url("../img/map.jpg");
 }
 
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 1200px;
+    height: 430px;
+}
+
 .main-footer{
 	width: 1146px;
 	padding: 0 27px;
