@@ -7,6 +7,20 @@ body {
 	background-color: #849d8f;
 }
 
+@keyframes bounce {
+0% { transform: translateY(-2000px); }
+70% { transform: translateY(30px); }
+90% { transform: translateY(-10px); }
+100% { transform: translateY(0); }
+}
+
+@keyframes shake {
+0%, 100% { transform: translateX(0); }
+10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -669,14 +683,17 @@ body input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
 	background: url("../img/icon-basket.svg") center no-repeat;
+	
 }
 
 .user-block .full{
 	background-color: #ffffff;
+
 }
 
 .user-block .full a{
 	color: #000000;
+
 }
 
 .full::before{
@@ -687,6 +704,7 @@ body input[type="checkbox"] {
 	width: 20px;
 	height: 20px;
 	background: url("../img/icon-basket-full.png") center no-repeat;
+
 }
 
 .basket:not(.full):hover{
@@ -699,10 +717,6 @@ body input[type="checkbox"] {
 
 .basket:not(.full):hover::before{
 	background: url("../img/icon-basket-full.png") center no-repeat;
-}
-
-.basket:hover .ordered{
-	display: block;
 }
 
 .user-block .ordered{
@@ -719,6 +733,9 @@ body input[type="checkbox"] {
 	z-index: 10;
 }
 
+.basket:hover .ordered{
+	display: block;
+}
 
 .user-block .ordered .order-item{
 	padding-top: 20px;
@@ -1315,6 +1332,11 @@ select:not([size]):not([multiple]) {
 	text-decoration: underline;
 }
 
+.blog a:hover{
+	color: #ffbc9e;
+	
+}
+
 .subscription {
 	position: relative;
 }
@@ -1636,13 +1658,17 @@ select:not([size]):not([multiple]) {
     color: #323232;
     border-radius: 10px;
     background-color: #f8f7f4;
+
 }
 
 .feedback-form-show{
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
 
     display: block;
+    animation: bounce 0.6s;
+}
+
+.modal-error{
+	animation: shake 0.6s;
 }
 
 .popup-overlay{
@@ -1661,8 +1687,10 @@ select:not([size]):not([multiple]) {
 }
 
 .popup-overlay-show{
+
 	z-index: 5;
     display: block;
+
 }
 
 .feedback-title{
